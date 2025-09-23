@@ -1,0 +1,26 @@
+:host { display: block; }
+
+.footer {
+  background: var(--light-gray);
+  border-top: 1px solid var(--border-color);
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--secondary-text);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.content a {
+  color: var(--secondary-text);
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: var(--accent-color);
+}
+

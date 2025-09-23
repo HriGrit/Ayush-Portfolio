@@ -1,0 +1,7 @@
+:host { display: block; }
+
+.group { margin-bottom: 20px; }
+.cat { margin: 0 0 8px; font-size: 1.05rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { background: var(--light-gray); border: 1px solid var(--border-color); padding: 6px 10px; border-radius: 999px; font-size: 0.9rem; }
+

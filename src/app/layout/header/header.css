@@ -1,0 +1,37 @@
+:host { display: block; }
+
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(11,18,32,0.6); /* matches --background with transparency */
+  -webkit-backdrop-filter: blur(8px) saturate(160%);
+  backdrop-filter: blur(8px) saturate(160%);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 10;
+}
+
+.nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--primary-text);
+  text-decoration: none;
+}
+
+.links a {
+  margin-left: 16px;
+  color: var(--secondary-text);
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: var(--accent-color);
+}
+

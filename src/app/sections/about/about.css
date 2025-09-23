@@ -1,0 +1,7 @@
+:host { display: block; }
+
+section p {
+  color: var(--secondary-text);
+  line-height: 1.6;
+}
+

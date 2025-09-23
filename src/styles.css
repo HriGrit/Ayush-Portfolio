@@ -1,1 +1,55 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+:root {
+  /* Dark theme palette */
+  --background: #0b1220; /* near-navy */
+  --surface: #111827; /* dark surface for cards/sections */
+  --surface-muted: #0f172a; /* muted alt surface */
+  --primary-text: #e5e7eb; /* light gray text */
+  --secondary-text: #94a3b8; /* slate text */
+  --accent-color: #3b82f6; /* blue for links/buttons */
+  --border-color: #1f2937; /* subtle border */
+  --tag-bg: #111827; /* tag background */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  background-color: var(--background);
+  color: var(--primary-text);
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--border-color);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Utility classes for surfaces (optional use across components) */
+.surface {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+}
+
+/* Links */
+a { color: var(--accent-color); }
+a:hover { opacity: 0.9; }

@@ -1,0 +1,13 @@
+<section id="skills">
+  <h2>Skills</h2>
+  @for (category of categories(); track category) {
+    <div class="group">
+      <h3 class="cat">{{ category }}</h3>
+      <div class="chips">
+        @for (s of byCategory()[category]; track s.name) {
+          <span class="chip">{{ s.name }}</span>
+        }
+      </div>
+    </div>
+  }
+</section>

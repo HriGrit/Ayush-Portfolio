@@ -1,0 +1,19 @@
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    @for (p of items(); track p.title) {
+      <article class="card">
+        <h3>{{ p.title }}</h3>
+        <p class="subtitle">{{ p.subtitle }}</p>
+        <p>{{ p.description }}</p>
+        <div class="tags">
+          @for (t of p.techStack; track t) {
+            <span class="tag">{{ t }}</span>
+          }
+        </div>
+        <a class="btn" [href]="p.githubUrl" target="_blank" rel="noopener">View on GitHub</a>
+      </article>
+    }
+  </div>
+
+</section>

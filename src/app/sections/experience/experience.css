@@ -1,0 +1,18 @@
+:host { display: block; }
+
+.exp { margin-bottom: 24px; }
+.exp-header { margin-bottom: 8px; }
+.role { margin: 0; font-size: 1.1rem; }
+.meta { color: var(--secondary-text); font-size: 0.95rem; }
+
+ul { margin: 0; padding-left: 18px; }
+li { margin: 6px 0; }
+
+/* Card-like styling for each experience */
+.exp {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+}
+
