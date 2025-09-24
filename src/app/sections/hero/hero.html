@@ -1,10 +1,13 @@
 <section id="hero" class="hero">
-  <div class="intro">
-    <h1>Hi, I'm {{ info()?.name || 'Ayush' }}</h1>
-    <p class="subtitle">Software Engineer crafting performant, accessible, and scalable web apps.</p>
-    <div class="actions">
-      <a class="btn primary" [href]="info()?.github" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn" [href]="info()?.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+  <div class="hero-content">
+    <img class="avatar" [ngSrc]="avatarSrc" width="160" height="160" alt="Ayush Soam" priority>
+    <div class="intro">
+      <h1>Hi, I'm {{ info()?.name || 'Ayush' }}</h1>
+      <p class="subtitle">Software Engineer crafting performant, accessible, and scalable web apps.</p>
+      <div class="actions">
+        <a class="btn primary" [href]="info()?.github" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" [href]="info()?.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
   </div>
 </section>

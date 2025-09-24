@@ -6,6 +6,21 @@
   margin: 0 auto;
 }
 
+.hero-content {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
 .intro h1 {
   font-size: 2.25rem;
   margin: 0 0 10px;
@@ -31,5 +46,15 @@
   background: var(--accent-color);
   border-color: var(--accent-color);
   color: white;
+}
+
+@media (max-width: 640px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .intro h1 { font-size: 1.75rem; }
 }
 
