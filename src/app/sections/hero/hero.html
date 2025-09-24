@@ -2,11 +2,15 @@
   <div class="hero-content">
     <img class="avatar" [ngSrc]="avatarSrc" width="160" height="160" alt="Ayush Soam" priority>
     <div class="intro">
-      <h1>Hi, I'm {{ info()?.name || 'Ayush' }}</h1>
-      <p class="subtitle">Software Engineer crafting performant, accessible, and scalable web apps.</p>
+      <h2 class="intro-name">Hey, I'm {{ info()?.name || 'Ayush' }}</h2>
+      <h3>Associate Software Engineer @Biz2x</h3>
+      <p class="subtitle">I engineer secure, scalable web experiences with Angular, React, Node.js, and cloud. I build clean, accessible UIs while creating really cool softwares.</p>
       <div class="actions">
-        <a class="btn primary" [href]="info()?.github" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" [href]="info()?.linkedin" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- <app-button variant="primary" href="https://github.com/HriGrit" target="_blank" content="Github"></app-button> -->
+        <!-- <app-button variant="primary" href="https://linkedin.com/in/ayush-soam" target="_blank" content="LinkedIn"></app-button> -->
+        <a href="http://github.com/HriGrit"><img width="48" height="48" src="https://img.icons8.com/material-outlined/96/github.png" alt="github"/></a>
+        <a href="https://linkedin.com/in/ayush-soam"><img width="48" height="48" src="https://img.icons8.com/color/96/linkedin.png" alt="linkedin"/></a>
+        <app-button variant="primary" href="/Resume.pdf" target="_blank" content="Resume"></app-button>
       </div>
     </div>
   </div>

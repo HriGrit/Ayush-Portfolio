@@ -1,4 +1,6 @@
-:host { display: block; }
+:host {
+  display: block;
+}
 
 .grid {
   display: grid;
@@ -7,7 +9,9 @@
 }
 
 @media (min-width: 720px) {
-  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .card {
@@ -15,12 +19,52 @@
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 16px;
+  transition: all 0.3s ease;
 }
 
-.subtitle { color: var(--secondary-text); margin: 4px 0 10px; }
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
+  cursor: url("/arrowhead-rounded-outline-1.svg"),auto;
+}
 
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
-.tag { background: var(--tag-bg); color: var(--secondary-text); padding: 4px 8px; border-radius: 999px; font-size: 0.85rem; border: 1px solid var(--border-color); }
+.subtitle {
+  color: var(--secondary-text);
+  margin: 4px 0 10px;
+}
 
-.btn { display: inline-block; margin-top: 8px; text-decoration: none; color: white; background: var(--accent-color); padding: 8px 12px; border-radius: 8px; }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+.tag {
+  background: var(--tag-bg);
+  color: var(--secondary-text);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
 
+.tag:hover {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+  transform: translateY(-1px);
+  cursor: url("/arrowhead-rounded-outline-1.svg"),auto;
+}
+
+.card a {
+  /* text-align: right; */
+}
+
+@media (max-width: 640px) {
+  .card app-button {
+    display: block;
+    margin: 12px auto 0;
+  }
+}

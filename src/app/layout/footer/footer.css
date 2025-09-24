@@ -11,8 +11,14 @@
   padding: 20px;
   color: var(--secondary-text);
   display: flex;
+  justify-content: space-between;
   gap: 10px;
   align-items: center;
+}
+
+.footer-link {
+  display: flex;
+  gap: 16px;
 }
 
 .content a {
@@ -22,5 +28,6 @@
 
 .content a:hover {
   color: var(--accent-color);
+  cursor: url("/arrowhead-rounded-outline-1.svg"),auto;
 }
 

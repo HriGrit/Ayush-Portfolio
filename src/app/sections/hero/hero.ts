@@ -1,10 +1,11 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { PortfolioDataService } from '../../services/portfolio-data.service';
+import { Button } from "../../components/button/button";
 
 @Component({
   selector: 'app-hero',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, Button],
   templateUrl: './hero.html',
   styleUrl: './hero.css'
 })

@@ -3,7 +3,10 @@
   <div class="grid">
     @for (p of items(); track p.title) {
       <article class="card">
-        <h3>{{ p.title }}</h3>
+        <div style="display: flex; justify-content: space-between;">
+          <h3>{{ p.title }}</h3>
+          <a [href]=p.githubUrl><img width="48" height="48" src="https://img.icons8.com/material-outlined/96/github.png" alt="github"/></a>
+        </div>
         <p class="subtitle">{{ p.subtitle }}</p>
         <p>{{ p.description }}</p>
         <div class="tags">
@@ -11,7 +14,10 @@
             <span class="tag">{{ t }}</span>
           }
         </div>
-        <a class="btn" [href]="p.githubUrl" target="_blank" rel="noopener">View on GitHub</a>
+        <!-- <app-button variant="primary" style="display: flex; justify-content: right;">View on Github</app-button> -->
+        <!-- <div style="display: flex; justify-content: right;">
+          <a href="http://github.com/HriGrit"><img width="48" height="48" src="https://img.icons8.com/material-outlined/96/github.png" alt="github"/></a>
+        </div> -->
       </article>
     }
   </div>

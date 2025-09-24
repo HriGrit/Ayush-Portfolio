@@ -1,7 +1,35 @@
-:host { display: block; }
+:host {
+  display: block;
+}
+#skills {
+  margin-bottom: 0;
+}
 
-.group { margin-bottom: 20px; }
-.cat { margin: 0 0 8px; font-size: 1.05rem; }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip { background: var(--light-gray); border: 1px solid var(--border-color); padding: 6px 10px; border-radius: 999px; font-size: 0.9rem; }
+.skills-group {
+  margin-bottom: 20px;
+}
+.skills-category {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.skills-chip {
+  background: var(--light-gray);
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
 
+.skills-chip:hover {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+  cursor: url("/arrowhead-rounded-outline-1.svg"),auto;
+}

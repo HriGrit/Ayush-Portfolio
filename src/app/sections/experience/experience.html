@@ -1,16 +1,36 @@
-<section id="experience">
-  <h2>Experience</h2>
-  @for (exp of items(); track exp.company) {
-    <article class="exp">
-      <header class="exp-header">
-        <h3 class="role">{{ exp.role }}</h3>
-        <div class="meta">{{ exp.company }} • {{ exp.location }} • {{ exp.duration }}</div>
-      </header>
-      <ul>
-        @for (d of exp.description; track d) {
-          <li>{{ d }}</li>
-        }
-      </ul>
-    </article>
-  }
+<section id="experience" class="experience-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Experience</h2>
+      <!-- <div class="section-accent"></div> -->
+    </div>
+
+    <div class="timeline">
+      @for (exp of items(); track exp.company) {
+        <div class="timeline-row">
+          <div class="timeline-marker">
+            <span class="dot"><span class="inner-dot"></span></span>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="title">
+                <h3 class="role">{{ exp.role }}</h3>
+                <p class="company">{{ exp.company }}</p>
+              </div>
+              <span class="period-badge">{{ exp.duration }}</span>
+            </div>
+
+            <div class="meta">{{ exp.location }}</div>
+
+            <ul class="desc">
+              @for (d of exp.description; track d) {
+                <li>{{ d }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
 </section>

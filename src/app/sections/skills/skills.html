@@ -1,11 +1,11 @@
-<section id="skills">
-  <h2>Skills</h2>
+<h2 id="skills">Skills</h2>
+<section>
   @for (category of categories(); track category) {
-    <div class="group">
-      <h3 class="cat">{{ category }}</h3>
-      <div class="chips">
+    <div class="skills-group">
+      <h3 class="skills-category">{{ category }}</h3>
+      <div class="skills-chips">
         @for (s of byCategory()[category]; track s.name) {
-          <span class="chip">{{ s.name }}</span>
+          <span class="skills-chip">{{ s.name }}</span>
         }
       </div>
     </div>

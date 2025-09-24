@@ -5,3 +5,7 @@ section p {
   line-height: 1.6;
 }
 
+#about p {
+  text-align: justify;
+}
+
