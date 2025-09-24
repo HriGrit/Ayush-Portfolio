@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Header } from './layout/header/header';
 import { Footer } from './layout/footer/footer';
 import { Hero } from './sections/hero/hero';
@@ -11,8 +11,7 @@ import { Skills } from './sections/skills/skills';
   selector: 'app-root',
   imports: [Header, Footer, Hero, About, Experience, Projects, Skills],
   templateUrl: './app.html',
-  styleUrl: './app.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('Ayush-Portfolio');
