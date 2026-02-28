@@ -1,6 +1,6 @@
 export interface Skill {
   name: string;
-  category: 'Frontend' | 'Backend & Databases' | 'DevOps & Cloud';
+  category: 'AI/ML & LLMs' | 'Frontend' | 'Backend & Databases' | 'DevOps & Cloud';
 }
 
 
