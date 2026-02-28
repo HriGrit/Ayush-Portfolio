@@ -62,25 +62,6 @@
 
         <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate class="form">
           <div class="field">
-            <label for="name" class="label">Name</label>
-            <input id="name" formControlName="name" type="text" placeholder="Your Name" class="input" />
-            @if (form.controls.name.touched && form.controls.name.invalid) {
-            <div class="error">Name is required.</div>
-            }
-          </div>
-
-          <div class="field">
-            <label for="email" class="label">Email</label>
-            <input id="email" formControlName="email" type="email" placeholder="Your Email" class="input" />
-            @if (form.controls.email.touched && form.controls.email.invalid) {
-            <div class="error">
-              @if (form.controls.email.errors?.['required']) { <span>Email is required.</span> }
-              @if (form.controls.email.errors?.['email']) { <span>Please enter a valid email.</span> }
-            </div>
-            }
-          </div>
-
-          <div class="field">
             <label for="subject" class="label">Subject</label>
             <input id="subject" formControlName="subject" type="text" placeholder="Subject of your message"
               class="input" />

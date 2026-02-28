@@ -14,13 +14,9 @@ export class Contact {
   submitted = signal(false);
 
   readonly form: FormGroup<{
-    name: FormControl<string>;
-    email: FormControl<string>;
     subject: FormControl<string>;
     message: FormControl<string>;
   }> = this.formBuilder.nonNullable.group({
-    name: ['', [Validators.required]],
-    email: ['', [Validators.required, Validators.email]],
     subject: ['', [Validators.required]],
     message: ['', [Validators.required]]
   });
@@ -31,9 +27,8 @@ export class Contact {
       return;
     }
 
-    const { name, email, subject, message } = this.form.getRawValue();
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    const mailto = `mailto:ayushsoam15@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const { subject, message } = this.form.getRawValue();
+    const mailto = `mailto:ayushsoam15@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
 
     window.location.href = mailto;
     this.submitted.set(true);
